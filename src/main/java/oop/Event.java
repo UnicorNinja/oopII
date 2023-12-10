@@ -41,11 +41,11 @@ class Event {
         this.eventDate = eventDate;
     }
 
-    public void getEventDescription(){
-        return eventDescritpion;
+    public String getEventDescription(){
+        return eventDescription;
     }
 
-    public String setEventDescription(String eventDescription){
+    public void setEventDescription(String eventDescription){
         this.eventDescription = eventDescription;
     }
 

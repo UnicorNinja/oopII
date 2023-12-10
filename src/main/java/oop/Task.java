@@ -1,11 +1,11 @@
 package oop;
 
 //subclass of event
-class Operation extends Event {
+class Task extends Event {
     private String due;
     private String status;
 
-    public Operation(String eventName, String eventDate, String due, String status) {
+    public Task(String eventName, String eventDate, String due, String status) {
         super(eventName, eventDate);
         this.due = due;
         this.status = status;
