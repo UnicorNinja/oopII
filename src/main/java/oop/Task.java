@@ -3,9 +3,9 @@ package oop;
 //subclass of event
 class Task extends Event {
     private String due;
-    private String status;
+    private boolean status;
 
-    public Task(String eventName, String eventDate, String due, String status) {
+    public Task(String eventName, String eventDate, String due, boolean status) {
         super(eventName, eventDate);
         this.due = due;
         this.status = status;
@@ -21,11 +21,11 @@ class Task extends Event {
         this.due = due;
     }
 
-    public String getStatus(){
+    public boolean getStatus(){
         return status;
     }
 
-    public void setStatus(String status){
+    public void setStatus(boolean status){
         this.status = status;
     }
 }

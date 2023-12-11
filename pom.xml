@@ -15,6 +15,15 @@
 
     <dependencies>
 
+        <!-- https://mvnrepository.com/artifact/org.mnode.ical4j/ical4j -->
+        <dependency>
+            <groupId>org.mnode.ical4j</groupId>
+            <artifactId>ical4j</artifactId>
+            <version>3.2.14</version>
+        </dependency>
+
+        
+
         <dependency>
             <groupId>gr.hua.dit.oop2</groupId>
             <artifactId>calendar</artifactId>
