@@ -12,15 +12,23 @@ class Event {
         this.eventDate = eventDate;
         this.eventDescription = eventDescription;
     }
-
-    public static void showEvents() {
+    //tha prepei na einai to arxeio deutero orisma
+    public static void showEvents(String typelist,String icsfile) {
         System.out.println("Showing Events...");
-        // Implement logic to show events
+        //diavazo to ical
+        System.out.println("MMMPPPPRRR tipono tin event list");
+
     }
 
-    public static void updateEvents() {
+    public static void updateEvents(String icsfile) {
         System.out.println("Updating Events...");
-        // Implement logic to update events
+        //diavazo to ical arxeio xoris allo orisma me ena mono orisma anoigei to edit mode
+        if (icsfile.exists()) {
+            Event.addEvent(icsfile);
+        } else {
+            System.out.println("MMPPPPRRRR kano update to iparxon event");
+        }
+        
     }
 
     //getters and setters
