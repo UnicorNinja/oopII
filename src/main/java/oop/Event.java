@@ -2,18 +2,19 @@ package oop;
 
 //event class
 class Event {
-    private String eventName;
-    private String eventDate;
-    private String eventDescription;
+    private String name;
+    private String date;
+    private String description;
 
 
-    public Event(String eventName, String eventDate) {
-        this.eventName = eventName;
-        this.eventDate = eventDate;
-        this.eventDescription = eventDescription;
+    public Event(String name, String date, String description) {
+        this.name = name;
+        this.date = date;
+        this.description = description;
     }
     //tha prepei na einai to arxeio deutero orisma
-    public static void showEvents(String typelist,String icsfile) {
+    public static void showEvents(String icsfile, String command) {
+
         System.out.println("Showing Events...");
         //diavazo to ical
         System.out.println("MMMPPPPRRR tipono tin event list");
@@ -33,28 +34,28 @@ class Event {
 
     //getters and setters
 
-    public String getEventName() {
-        return eventName;
+    public String getName() {
+        return name;
     }
 
-    public void setEventName(String eventName) {
-        this.eventName = eventName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getEventDate() {
-        return eventDate;
+    public String getDate() {
+        return date;
     }
 
-    public void setEventDate(String eventDate) {
-        this.eventDate = eventDate;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public String getEventDescription(){
-        return eventDescription;
+    public String getDescription(){
+        return description;
     }
 
-    public void setEventDescription(String eventDescription){
-        this.eventDescription = eventDescription;
+    public void setDescription(String description){
+        this.description = description;
     }
 
     

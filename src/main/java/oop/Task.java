@@ -5,8 +5,8 @@ class Task extends Event {
     private String due;
     private boolean status;
 
-    public Task(String eventName, String eventDate, String due, boolean status) {
-        super(eventName, eventDate);
+    public Task(String name, String date,String description, String due, boolean status) {
+        super(name, date,description);
         this.due = due;
         this.status = status;
     }
