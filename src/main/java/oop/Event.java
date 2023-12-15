@@ -1,7 +1,9 @@
 package oop;
 
+import net.fortuna.ical4j.model.component.VEvent;
+import net.fortuna.ical4j.model.component.VToDo;
 //event class
-class Event {
+public class Event {
     private String name;
     private String date;
     private String description;
@@ -12,9 +14,26 @@ class Event {
         this.date = date;
         this.description = description;
     }
-    //tha prepei na einai to arxeio deutero orisma
-    public static void showEvents(String icsfile, String command) {
 
+    static Event createEventFromVEvent(VEvent vEvent) {
+        String name = vEvent.getSummary().getValue();
+        String date = vEvent.getStartDate().getValue();
+        String description = vEvent.getDescription().getValue();
+
+        return new Event(name,date, description);
+    }
+
+    static Event createEventFromVToDo(VToDo vToDo){
+        String name = vToDo.getSummary().getValue();
+        String date = vToDo.getStartDate().getValue();
+        String description = vToDo.getDescription().getValue();
+
+        return new Event(name,date, description);
+    }
+    //tha prepei na einai to arxeio deutero orisma
+    public void showEvents(String icsfile, String command) {
+
+        
         System.out.println("Showing Events...");
         //diavazo to ical
         System.out.println("MMMPPPPRRR tipono tin event list");

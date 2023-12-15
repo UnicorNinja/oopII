@@ -2,6 +2,7 @@ package oop;
 
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import gr.hua.dit.oop2.calendar.TimeEvent;
 import gr.hua.dit.oop2.calendar.TimeListener;
@@ -15,34 +16,12 @@ public class Main {
         if (args.length == 2){
             String command = args[0];
             String icsFile = args[1];
+            List<Event> events = Parse.parseICalFile(icsFile, command);
 
-            switch (command){
-                case "day":
-                    Event.showEvents(icsFile, command);
-                    break;
-                case "week":
-                    Event.showEvents(icsFile, command);
-                    break;
-                case "month":
-                    Event.showEvents(icsFile, command);
-                    break;
-                case "pastday":
-                    Event.showEvents(icsFile, command);
-                    break;
-                case "pastweek":
-                    Event.showEvents(icsFile, command);
-                    break;
-                case "pastmonth":
-                    Event.showEvents(icsFile, command);
-                    break;
-                case "todo":
-                    Event.showEvents(icsFile, command);
-                    break;
-                case "due":
-                    Event.showEvents(icsFile, command);
-                    break;
-                default:
-                    System.out.println("Invalid command");
+            // Use the 'events' list as needed
+            for (Event event : events) {
+                // Do something with each event
+                System.out.println(event);
             }
         }
         else if (args.length == 1){
