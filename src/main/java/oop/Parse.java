@@ -4,6 +4,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import net.fortuna.ical4j.data.CalendarBuilder;
@@ -47,6 +49,10 @@ public class Parse {
                 }
             }
         }
+
+        Collections.sort(events, Comparator.comparing(Event::getDate));
         return events;
     }
+
+
 }

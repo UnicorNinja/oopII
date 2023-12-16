@@ -27,10 +27,11 @@ public class Event {
         String name = vToDo.getSummary().getValue();
         String date = vToDo.getStartDate().getValue();
         String description = vToDo.getDescription().getValue();
+        
 
         return new Event(name,date, description);
     }
-    //tha prepei na einai to arxeio deutero orisma
+    
     public void showEvents(String icsfile, String command) {
 
         

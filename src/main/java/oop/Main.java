@@ -13,9 +13,10 @@ import gr.hua.dit.oop2.calendar.TimeTeller;
 public class Main {
 
     public static void main(String[] args) {
-        if (args.length == 2){
-            String command = args[0];
-            String icsFile = args[1];
+        
+        if (args.length == 0){
+            String command = "day";//args[0];
+            String icsFile = "c:\\Users\\UnicorNinja\\Documents\\ical\\calendar1"; //args[1];
             List<Event> events = Parse.parseICalFile(icsFile, command);
 
             // Use the 'events' list as needed
@@ -33,6 +34,7 @@ public class Main {
             System.out.println("commands: day, week, month, pastday, pastweek, pastmonth, todo, due");
             System.out.println("Command prints a list of events. If no command is included then you may add a new event or create calendar");
             System.out.println("Please input a valid command");
+            
         }
         
 
