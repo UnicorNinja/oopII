@@ -1,5 +1,7 @@
 package oop;
 
+import java.time.LocalDateTime;
+
 import net.fortuna.ical4j.model.component.VEvent;
 import net.fortuna.ical4j.model.component.VToDo;
 //event class
@@ -32,23 +34,45 @@ public class Event {
         return new Event(name,date, description);
     }
     
-    public void showEvents(String icsfile, String command) {
-
-        
+    public static void showEvents(String icsfile, String command, Event event) {
         System.out.println("Showing Events...");
-        //diavazo to ical
-        System.out.println("MMMPPPPRRR tipono tin event list");
+        LocalDateTime time = Time.timeNow();
+        switch (command) {
+            case "day":
+                if Event.date.isEqual(time.getDayOfMonth() 
+                
+                break;
+            case "week":
+                break;
+            case "month":
+                break;
+            case "pastday":
+                break;
+                
+            case "pastweek":
+                break;
+                
+            case "pastmonth":
+                break;
+                
+            case "todo":
+                break;
+                
+            case "due":
+                Time.timeNow();
+                break;
+            default:
+                break;
+        }
+        
+        
+        
 
     }
 
     public static void updateEvents(String icsfile) {
         System.out.println("Updating Events...");
-        //diavazo to ical arxeio xoris allo orisma me ena mono orisma anoigei to edit mode
-        if (icsfile.exists()) {
-            Event.addEvent(icsfile);
-        } else {
-            System.out.println("MMPPPPRRRR kano update to iparxon event");
-        }
+        
         
     }
 

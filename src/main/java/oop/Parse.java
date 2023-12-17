@@ -18,7 +18,7 @@ import net.fortuna.ical4j.model.component.VToDo;
 
 
 public class Parse {
-    public static List <Event> parseICalFile(String icsFile, String command) {
+    public static List <Event> parseICalFile(String icsFile) {
         List <Event> events = new ArrayList <> ();
         InputStream is = null;
 

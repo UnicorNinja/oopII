@@ -1,13 +1,8 @@
 package oop;
 
 
-import java.time.LocalDateTime;
 import java.util.List;
 
-import gr.hua.dit.oop2.calendar.TimeEvent;
-import gr.hua.dit.oop2.calendar.TimeListener;
-import gr.hua.dit.oop2.calendar.TimeService;
-import gr.hua.dit.oop2.calendar.TimeTeller;
 
 
 public class Main {
@@ -15,13 +10,16 @@ public class Main {
     public static void main(String[] args) {
         
         if (args.length == 0){
-            String command = "day";//args[0];
-            String icsFile = "c:\\Users\\UnicorNinja\\Documents\\ical\\calendar1"; //args[1];
-            List<Event> events = Parse.parseICalFile(icsFile, command);
+            String command = args[0];
+            String icsFile = args[1];
+            Cache.configureCacheProvider();
+            List<Event> events = Parse.parseICalFile(icsFile);
+            
 
-            // Use the 'events' list as needed
+            
             for (Event event : events) {
-                // Do something with each event
+                Event.showEvents(icsFile, command,event);
+                
                 System.out.println(event);
             }
         }
@@ -38,18 +36,7 @@ public class Main {
         }
         
 
-            
-            TimeTeller teller = TimeService.getTeller();
-            teller.addTimeListener(new TimeListener() {
-                public void timeChanged(TimeEvent e) {
-                    System.out.println("Time has changed to " + e.getDateTime());
-                }
-            });
-        TimeService.waitUntilTimeEnds();
-        //tha prepei na pairnei ex arxis i efarmogi dio orismata pou tha pernane stin sinexeia sta methods.
-        //isos den einai kali idea to menu etsi opos einai
-
-        System.out.println(LocalDateTime.now());
+        
 
             
         
